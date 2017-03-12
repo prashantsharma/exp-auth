@@ -39,7 +39,8 @@ router.post('/signup', passport.authenticate('local-signup',{
 router.post('/login', passport.authenticate('local-login',{
 	successRedirect:'/profile',
 	failureRedirect:'/login',
-	failureFlash:true
+	failureFlash:true,
+	session:true
 }));
 
 module.exports = router;
